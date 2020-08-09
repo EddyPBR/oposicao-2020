@@ -1,0 +1,51 @@
+:root {
+  --color-red: #da402b;
+  --color-red-dark: #cc331f;
+  --color-red-darkest: #bf2813;
+  --color-red-light: #e84f3a;
+  --color-red-lighter: #f55e49;
+  --color-green: #4ab548;
+  --color-green-dark: #3ca63a;
+  --color-green-darkest: #30992e;
+  --color-green-light: #5cc45a;
+  --color-green-lighter: #6ad169;
+  --color-yellow: #f2d50d;
+  --color-yellow-dark: #e5c900;
+  --color-yellow-darkest: #e0bb00;
+  --color-yellow-light: #ffe21a;
+  --color-yellow-lighter: #ffee00;
+  --color-dark: #2b3c54;
+  --color-dark-light: #3f5573;
+  --color-darkest: #203046;
+  --color-shadow-color: #babace;
+  --color-background: #f0f0f7;
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+textarea {
+  font: 500 1.6rem Sarabun;
+  color: var(--color-dark);
+}
+
+button {
+  font: 700 1.6rem Roboto;
+  color: var(--color-background);
+}
