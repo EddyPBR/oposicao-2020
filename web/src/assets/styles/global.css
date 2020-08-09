@@ -49,3 +49,13 @@ button {
   font: 700 1.6rem Roboto;
   color: var(--color-background);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: 700 3.2 "Red Hat Display";
+  color: var(--color-dark);
+}
