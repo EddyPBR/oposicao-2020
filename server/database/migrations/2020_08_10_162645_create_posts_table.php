@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('candidate_id');
             $table->string('title');
             $table->string('author');
             $table->longText('body');
@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->string('youtube')->nullable();
             $table->timestamps();
 
-            $table->foreign('author_id')->references('id')->on('candidates');
+            $table->foreign('candidate_id')->references('id')->on('candidates');
         });
     }
 
