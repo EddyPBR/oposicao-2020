@@ -18,7 +18,7 @@
 
         <div class="form-group">
             <label for="author">Autor</label>
-            <select value="{{ $post->author }}" selected name="author" class="form-control">
+            <select name="author" class="form-control">
                 @foreach($candidates as $candidate)
                     <option value="{{ $candidate->name }}">{{ $candidate->name }}</option>
                 @endforeach
