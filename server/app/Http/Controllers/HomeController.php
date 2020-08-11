@@ -19,7 +19,7 @@ class HomeController extends Controller
     }
 
     public function blog(){
-        $posts = Post::paginate(12);
+        $posts = Post::paginate(6);
 
         return $posts;
     }
