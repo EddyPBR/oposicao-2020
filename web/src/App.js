@@ -1,8 +1,9 @@
 import React from "react";
 import "./assets/styles/global.css";
+import Routes from './routes';
 
 const App = () => {
-  return <h1>oposicao 2020</h1>;
+  return <Routes/>
 };
 
 export default App;

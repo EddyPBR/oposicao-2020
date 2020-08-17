@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+header .header-logo img {
+  max-height: 85px;
+  max-width: 118.5px;
+  padding-left: 15px;
+}
+
+header .header-content {
+  width: 100%;
+  max-width: 768px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header-content a {
+  text-decoration: none;
+  height: 100%;
+  padding: 0px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-darkest);
+}
+
+header .header-content a span {
+  font: 700 1.8rem "Red Hat Display";
+}
