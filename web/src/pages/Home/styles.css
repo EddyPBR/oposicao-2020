@@ -1,3 +1,5 @@
+/* recent-posts CSS */
+
 .recent-posts {
   display: flex;
   align-items: center;
@@ -5,20 +7,21 @@
   flex-wrap: wrap;
   margin-top: 105px;
   margin-bottom: 144px;
+  padding: 0px 100px;
 }
 
 .recent-posts .recent-post {
   border: 1px solid #babace;
   background-color: #F0F0F7;
   padding: 20px 20px;
-  max-width: 370px;
-  height: 490px;
+  height: 100%;
   margin: 15px 15px;
+  flex: 1;
 }
 
 .recent-posts .recent-post .image {
   height: 215px;
-  width: 330px;
+  width: 100%;
   background: #c4c4c4;
   margin-bottom: 20px;
 }
@@ -48,4 +51,12 @@
   font: 500 1.4rem Sarabun;
   line-height: 18px;
   margin-top: 24px;
+}
+
+/* cadidate CSS */
+
+.candidate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
