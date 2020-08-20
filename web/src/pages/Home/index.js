@@ -1,5 +1,4 @@
 import React from 'react';
-import candidate from '../../assets/images/RB2_2466.png';
 
 import './styles.css';
 

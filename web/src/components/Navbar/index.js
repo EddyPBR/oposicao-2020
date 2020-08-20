@@ -12,22 +12,22 @@ function Navbar() {
       </div>
       <div className="header-content">
         <Link to="/">
-          <spam>INICIO</spam>
+          <span>INICIO</span>
         </Link>
         <Link to="/posts">
-          <spam>POSTS</spam>
+          <span>POSTS</span>
         </Link>
         <Link to="/planodegoverno">
-          <spam>PLANO DE GOVERNO</spam>
+          <span>PLANO DE GOVERNO</span>
         </Link>
         <Link to="/candidatos">
-          <spam>CANDIDATOS 2020</spam>
+          <span>CANDIDATOS 2020</span>
         </Link>
         <Link to="/sobre">
-          <spam>SOBRE</spam>
+          <span>SOBRE</span>
         </Link>
         <Link to="/contato">
-          <spam>CONTATO</spam>
+          <span>CONTATO</span>
         </Link>
       </div>
     </header>

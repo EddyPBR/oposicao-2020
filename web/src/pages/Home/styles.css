@@ -52,11 +52,3 @@
   line-height: 18px;
   margin-top: 24px;
 }
-
-/* cadidate CSS */
-
-.candidate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
