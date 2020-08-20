@@ -64,6 +64,10 @@
   flex-wrap: wrap;
 }
 
+.candidate-section {
+  margin-bottom: 70px;
+}
+
 .candidate-section .candidate {
   width: 30%;
   height: 100%;
@@ -130,4 +134,52 @@
   line-height: 21px;
 
   color: var(--color-background);
+}
+
+/* contact-box CSS */
+
+.contact-box {
+  height: 249px;
+  width: 69.8%;
+  margin: 0px auto;
+  border-radius: 25px;
+  flex-direction: column;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--color-darkest);
+}
+
+.contact-box .title {
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 80%;
+
+  color: var(--color-background);
+}
+
+.contact-box .button {
+  width: 180px;
+  height: 50px;
+  border-radius: 8px;
+  color: var(--color-background);
+  background-color: var(--color-green-light);
+
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -67,6 +67,14 @@ function Index() {
           </Link>
         </div>
       </div>
+      <div className="contact-box">
+        <div className="title">
+          Dúvidas, sugestões, quer fazer parte do nosso trabalho? 
+        </div>
+        <Link className="button" to="/contact">
+          Entre em contato
+        </Link>
+      </div>
     </div>
   );
 }
