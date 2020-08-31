@@ -5,9 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
   margin-top: 105px;
   margin-bottom: 144px;
-  padding: 0px 100px;
 }
 
 .recent-posts .recent-post {
@@ -56,11 +58,14 @@
 /* candidate-section CSS */
 
 .candidate-section, .governament-plan {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0px 100px;
   flex-wrap: wrap;
 }
 
@@ -69,17 +74,23 @@
 }
 
 .candidate-section .candidate {
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  max-width: 540px;
+  background-image: url('../../assets/images/RB2_2466.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 110vh;
 }
 
-.candidate-section .candidate img {
+/* .candidate-section .candidate img {
   width: 100%;
   height: 100%;
-}
+} */
 
 .candidate-section .content {
-  width: 50%;
+  width: 100%;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,7 +151,7 @@
 
 .contact-box {
   height: 249px;
-  width: 69.8%;
+  max-width: 960px;
   margin: 0px auto;
   border-radius: 25px;
   flex-direction: column;
@@ -182,4 +193,61 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* apoiadores CSS */
+
+.apoiadores-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 188px;
+}
+
+.apoiadores-section .box {
+  display: flex;
+  flex: 1;
+
+  border: 2px solid #BABACE;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  padding: 86px 30px 62px 30px;
+  flex-direction: column;
+}
+
+.apoiadores-section .box .apoiadores {
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.apoiadores-section .box .apoiadores .apoiador {
+  display: flex;
+  width: 100%;
+  max-width: 115px;
+
+  margin: 0px 30px;
+}
+
+.apoiadores-section .box .apoiadores .apoiador img {
+  width: 100%;
+  height: 100%;
+}
+
+.apoiadores-section .box .title {
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  
+  color: #DA402B;
+  position: absolute;
+  display: flex;
+  align-self: center;
+  margin-top: -112px;
+  padding: 0px 22px;
+  background: var(--color-background);
 }
