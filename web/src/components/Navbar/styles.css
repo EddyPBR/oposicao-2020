@@ -45,3 +45,19 @@ header .container .header-content a {
 header .container .header-content a span {
   font: 700 1.6rem "Red Hat Display";
 }
+
+@media only screen and (max-width: 720px) {
+  header .container .header-content {
+    display: none;
+  }
+  header .container {
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

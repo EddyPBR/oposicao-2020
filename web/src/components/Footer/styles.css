@@ -11,8 +11,8 @@ footer {
 footer .footer-content {
   width: 100%;
   max-width: 1140px;
-  grid-template-columns: repeat(3, 1fr);
   display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -105,6 +105,7 @@ footer .footer-content .contact .button {
   font-size: 18px;
   line-height: 21px;
 
+  max-width: 100vw;
   background: var(--color-green-light);
 }
 
@@ -131,6 +132,30 @@ footer footer.footer-footer-row .circle {
   width: 5px;
   height: 5px;
   background: #C4C4C4;
-  border-radius: 50px;
+  border-radius: 50%;
   margin: 0px 10px;
+}
+
+@media only screen and (max-width: 720px) {
+  footer .footer-content {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer footer.footer-footer-row {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    font-size: 1.0rem;
+    height: 100%;
+    padding: 10px 0px;
+  }
+
+  footer footer.footer-footer-row .circle {
+    display: none;
+  }
 }
