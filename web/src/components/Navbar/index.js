@@ -18,7 +18,7 @@ function Navbar() {
           <Link to="/posts">
             <span>POSTS</span>
           </Link>
-          <Link to="/planodegoverno">
+          <Link to="/plano-de-governo">
             <span>PLANO DE GOVERNO</span>
           </Link>
           <Link to="/candidatos">

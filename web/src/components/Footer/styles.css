@@ -1,0 +1,136 @@
+footer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin-top: 240px;
+  justify-items: center;
+  align-items: center;
+  background: var(--color-darkest);
+}
+
+footer .footer-content {
+  width: 100%;
+  max-width: 1140px;
+  grid-template-columns: repeat(3, 1fr);
+  display: inline-grid;
+  gap: 30px;
+}
+
+footer .footer-content .navigation ul {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  height: 100%;
+
+  list-style: none;
+
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: var(--color-background);
+  line-height: 24px;
+
+  text-align: center;
+  padding: 30px 0px;
+}
+
+footer .footer-content .navigation ul a {
+  color: var(--color-background);
+  text-decoration: none;
+}
+
+footer .footer-content .redes-sociais {
+  text-align: center;
+  padding: 30px 0px 71px 0px;
+}
+
+footer .footer-content .redes-sociais h1 {
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: var(--color-background);
+}
+
+footer .footer-content .redes-sociais .networks {
+  display: inline-grid;
+  margin-top: 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+footer .footer-content .redes-sociais .networks .network {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--color-background);
+}
+
+footer .footer-content .contact {
+  color: var(--color-background);
+  padding: 30px 0px 61px 0px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-content .contact h1 {
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-background);
+
+  margin-bottom: 60px;
+}
+
+footer .footer-content .contact .button {
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+
+  background: var(--color-green-light);
+}
+
+footer footer.footer-footer-row {
+  width: 100%;
+  height: 30px;
+  margin: 0px;
+  background: #0A131F;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #C4C4C4;
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 16px;
+  text-align: center;
+}
+
+footer footer.footer-footer-row .circle {
+  width: 5px;
+  height: 5px;
+  background: #C4C4C4;
+  border-radius: 50px;
+  margin: 0px 10px;
+}

@@ -150,7 +150,8 @@
 /* contact-box CSS */
 
 .contact-box {
-  height: 249px;
+  height: 100%;
+  padding: 30px 0px 44px 0px;
   max-width: 960px;
   margin: 0px auto;
   border-radius: 25px;
