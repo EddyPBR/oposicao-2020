@@ -11,6 +11,12 @@ function Navbar() {
         <div className="header-logo">
           <img src={logo} alt="MDB" />
         </div>
+        <input type="checkbox" id="activate-menu"/>
+        <label htmlFor="activate-menu">
+          <div className="burger-button">
+            <span className="burger-icon"></span>
+          </div>
+        </label>
         <div className="header-content">
           <Link to="/">
             <span>INICIO</span>
