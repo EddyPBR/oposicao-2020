@@ -97,6 +97,7 @@ input#activate-menu {
 
   input:checked ~ label .burger-button .burger-icon {
     transform: rotate(45deg);
+    position: absolute;
   }
 
   input:checked ~ label .burger-button .burger-icon::before {
@@ -110,7 +111,15 @@ input#activate-menu {
   }
 
   input:checked ~ label .burger-button {
+    z-index: 1;
+    top: 20px;
+    right: 0px;
+    position: absolute;
     box-shadow: 0 0 0 130vw #ffffff, 0 0 0 130vh #ffffff;
+  }
+
+  input:checked ~ body {
+    overflow: hidden;
   }
 
   input:checked ~ .header-content {
@@ -120,9 +129,10 @@ input#activate-menu {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 9999;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     animation: animationMenuIn 2s;
   }
 

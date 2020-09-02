@@ -2,7 +2,6 @@ footer {
   width: 100%;
   height: 100%;
   display: grid;
-  margin-top: 240px;
   justify-items: center;
   align-items: center;
   background: var(--color-darkest);

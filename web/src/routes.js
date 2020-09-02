@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
+
+import Home from "./pages/Home";
+import Blog from './pages/Blog';
 
 export default function Routes() {
   return (
@@ -11,6 +13,7 @@ export default function Routes() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/posts" component={Blog} />
       </Switch>
       <Footer />
     </BrowserRouter>
