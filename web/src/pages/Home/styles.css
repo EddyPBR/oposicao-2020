@@ -8,52 +8,13 @@
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  margin-top: 105px;
-  margin-bottom: 144px;
+  margin-top: 45px;
+  margin-bottom: 84px;
 }
 
-.recent-posts .recent-post {
-  border: 1px solid #babace;
-  background-color: #F0F0F7;
-  padding: 20px 20px;
-  height: 100%;
-  margin: 15px 15px;
-  min-width: 290px;
+.recent-posts a {
   flex: 1;
-}
-
-.recent-posts .recent-post .image {
-  height: 215px;
-  width: 100%;
-  background: #c4c4c4;
-  margin-bottom: 20px;
-}
-
-.recent-posts .recent-post .title {
-  font: 500 2.4rem Sarabun;
-  font-weight: bold;
-  line-height: 28px;
-  color: var(--color-darkest);
-  margin: 0px 2px 16px 2px;
-}
-
-.recent-posts .recent-post blockquote {
-  font: 500 1.4rem Sarabun;
-  line-height: 18px;
-  color: var(--color-dark-light);
-}
-
-.recent-posts .recent-post blockquote span {
-  color: var(--color-darkest);
-  letter-spacing: 0.03em;
-  font-weight: bold;
-}
-
-.recent-posts .recent-post p {
-  color: var(--color-dark-light);
-  font: 500 1.4rem Sarabun;
-  line-height: 18px;
-  margin-top: 24px;
+  text-decoration: none;
 }
 
 /* candidate-section CSS */

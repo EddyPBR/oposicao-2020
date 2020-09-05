@@ -118,10 +118,6 @@ input#activate-menu {
     box-shadow: 0 0 0 130vw #ffffff, 0 0 0 130vh #ffffff;
   }
 
-  input:checked ~ body {
-    overflow: hidden;
-  }
-
   input:checked ~ .header-content {
     display: block;
     position: absolute;

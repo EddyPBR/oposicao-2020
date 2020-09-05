@@ -1,0 +1,163 @@
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 53px 0px 120px 0px;
+}
+
+.post .container {
+  width: calc(100% - 30px);
+  max-width: 1140px;
+}
+
+.post .container .infos {
+  margin-bottom: 56.89px;
+}
+
+.post .container .infos .title {
+  font: 400 3.2rem "Red Hat Display";
+  line-height: 48px;
+
+  color: var(--color-red);
+  margin-bottom: 10px;
+}
+
+.post .container .infos .description {
+  font: 500 1.8rem Sarabun;
+  color: var(--color-dark);
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.post .container .infos .details {
+  display: flex;
+  align-items: center;
+}
+
+.post .container .infos .details blockquote {
+  font: 500 1.4rem Sarabun;
+  line-height: 18px;
+  color: var(--color-dark-light);
+}
+
+.post .container .infos .details blockquote span {
+  color: var(--color-darkest);
+  letter-spacing: 0.03em;
+  font-weight: bold;
+}
+
+.post .container .infos .details .circle {
+  width: 4px;
+  height: 4px;
+  margin: 0px 10px;
+
+  border-radius: 50%;
+  background: var(--color-darkest);
+}
+
+.post .container .infos .details .date {
+  font: 500 1.4rem Sarabun;
+  line-height: 18px;
+
+  color: var(--color-dark-light);
+}
+
+.post .container .content {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 270px;
+}
+
+.post .container .content .post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .container .content .post-content .image {
+  flex: 1;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.post .container .content .post-content .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.post .container .content .post-content .text {
+  display: grid;
+  row-gap: 60px;
+  text-align: justify;
+
+  font: 500 1.8rem Sarabun;
+  color: var(--color-dark);
+  line-height: 32px;
+
+  margin-bottom: 60px;
+}
+
+.post .container .content .relevant-posts-content .share-buttons {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.post .container .content .relevant-posts-content .share-buttons .share-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  color: #000000;
+  box-sizing: border-box;
+  border: 1px solid #C4C4C4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post .container .iframe-facebook {
+  width: calc(100% - 300px);
+  height: 300px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 32px;
+
+  background: #c4c4c4;
+  color: black;
+  padding: 25px 27px;
+}
+
+@media only screen and (max-width: 768px) {
+  .post .container .content {
+    grid-template-columns: 1fr;
+  }
+
+  .post .container .content .post-content .image {
+    margin-bottom: 40px;
+  }
+
+  .post .container .iframe-facebook {
+    width: 100%;
+    height: 300px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 32px;
+  
+    background: #c4c4c4;
+    color: black;
+    padding: 25px 27px;
+    margin-top: 60px;
+  }
+}
