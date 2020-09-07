@@ -40,7 +40,7 @@
   .post .container .content .relevant-posts-content .relevant-posts {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: scroll;
     align-items: center;
     column-gap: 10px;
     

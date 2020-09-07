@@ -158,3 +158,27 @@ footer footer.footer-footer-row .circle {
     display: none;
   }
 }
+
+@media only screen and (max-width: 280px) {
+  footer .footer-content {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer footer.footer-footer-row {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    font-size: 0.9rem;
+    height: 100%;
+    padding: 10px 0px;
+  }
+
+  footer footer.footer-footer-row .circle {
+    display: none;
+  }
+}

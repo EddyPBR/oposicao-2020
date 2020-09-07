@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import candidate from '../../assets/images/RB2_2466.png';
+import candidate from '../../assets/images/RB2_2466.png';
 import logo from "../../assets/images/logo-mdb.png";
 import image_test from "../../assets/images/image.jpg";
 
@@ -43,21 +43,24 @@ function Index() {
         ))}
       </div>
       <div className="candidate-section">
-        <div className="candidate">
-        </div>
-        <div className="content">
-          <div className="title">
-            A NOSSA CANDIDATA
+        <div className="container">
+          <div className="candidate">
+            <img src={candidate} alt=""/>
           </div>
-          <div className="divider"></div>
-          <div className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            commodo convallis lorem, efficitur aliquam quam posuere id. Quisque
-            vitae orci orci. In aliquam bibendum turpis vitae cursus
+          <div className="content">
+            <div className="title">
+              A NOSSA CANDIDATA
+            </div>
+            <div className="divider"></div>
+            <div className="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+              commodo convallis lorem, efficitur aliquam quam posuere id. Quisque
+              vitae orci orci. In aliquam bibendum turpis vitae cursus
+            </div>
+            <Link className="button" to="/candidates">
+              Ver todos os candidatos
+            </Link>
           </div>
-          <Link className="button" to="/candidates">
-            Ver todos os candidatos
-          </Link>
         </div>
       </div>
       <div className="contact-box">
