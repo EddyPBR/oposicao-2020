@@ -1,6 +1,7 @@
 import React from 'react';
-import image_test from "../../assets/images/image.jpg";
+import { FiSearch } from 'react-icons/fi';
 
+import image_test from "../../assets/images/image.jpg";
 import './styles.css';
 
 import Post from '../../components/Post';
@@ -55,7 +56,10 @@ function Blog() {
   return (
     <div className="blog">
       <div className="search-bar">
-        <input type="text" placeholder="Pesquisar..." />
+        <div className="container">
+          <input type="text" placeholder="Pesquisar..." />
+          <FiSearch className="icon" />
+        </div>
       </div>
       <div className="posts">
         <div className="container">
