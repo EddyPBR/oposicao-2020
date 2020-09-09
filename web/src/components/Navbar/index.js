@@ -8,9 +8,9 @@ function Navbar() {
   return (
     <header>
       <div className="container">
-        <div className="header-logo">
+        <Link to="/" className="header-logo">
           <img src={logo} alt="MDB" />
-        </div>
+        </Link>
         <input type="checkbox" id="activate-menu"/>
         <label htmlFor="activate-menu">
           <div className="burger-button">
