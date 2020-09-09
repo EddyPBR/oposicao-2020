@@ -5,6 +5,14 @@ import logo from '../../assets/images/logo-mdb.png';
 import './styles.css';
 
 function Navbar() {
+  function desactivateMenu() {
+    const element = document.querySelector("#activate-menu");
+    if(element) {
+      element.checked = false;
+      console.log(element);
+    }
+  }
+
   return (
     <header>
       <div className="container">
@@ -18,7 +26,7 @@ function Navbar() {
           </div>
         </label>
         <div className="header-content">
-          <Link to="/">
+          <Link to="/" onClick={desactivateMenu}>
             <span>INICIO</span>
           </Link>
           <Link to="/blog">

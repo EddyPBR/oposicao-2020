@@ -5,6 +5,7 @@ import image_test from "../../assets/images/image.jpg";
 import './styles.css';
 
 import Post from '../../components/Post';
+import { Link } from 'react-router-dom';
 
 function Blog() {
   // Request API with pagination
@@ -61,11 +62,28 @@ function Blog() {
           <FiSearch className="icon" />
         </div>
       </div>
-      <div className="posts">
-        <div className="container">
+      <div className="container-post">
+        <div className="posts">
           {posts.map( (post, index) => (
             <Post post={post} key={index} />
           ))}
+        </div>
+        <div className="pagination">
+          <Link to="/blog?page=1" className="page">
+            1
+          </Link>
+          <Link to="/blog?page=1" className="page">
+            2
+          </Link>
+          <Link to="/blog?page=1" className="page">
+            3
+          </Link>
+          <Link to="/blog?page=1" className="page">
+            4
+          </Link>
+          <Link to="/blog?page=1" className="page">
+            5
+          </Link>
         </div>
       </div>
     </div>
