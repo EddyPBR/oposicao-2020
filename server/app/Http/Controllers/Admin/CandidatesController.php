@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Candidate;
 use App\Http\Requests\CandidateRequest;
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class CandidatesController extends Controller
 {
@@ -41,7 +44,28 @@ class CandidatesController extends Controller
     {
         $data = $request->all();
 
-        $candidate = Candidate::create($data);
+        $image = $request->file('image');
+
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = storage_path('app/public/candidates');
+        $img = Image::make($image->getRealPath());
+        $img->resize(870, 480, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['imagename']);
+   
+        $image->move($destinationPath, $input['imagename']);
+
+        $candidate = new Candidate;
+        $candidate->image = '/candidates/'.$input['imagename'];
+        $candidate->name = $request->name;
+        $candidate->age = $request->age;
+        $candidate->bio = $request->bio;
+        $candidate->candidate_number = $request->candidate_number;
+        $candidate->instagram = $request->instagram;
+        $candidate->facebook = $request->facebook;
+        $candidate->youtube = $request->youtube;
+
+        $candidate->save();
 
         flash('Candidato adcionado com sucesso')->success();
 

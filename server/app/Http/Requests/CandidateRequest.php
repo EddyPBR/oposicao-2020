@@ -27,12 +27,14 @@ class CandidateRequest extends FormRequest
             'name' => 'required',
             'age' => 'required',
             'bio' => 'required',
+            'image.*' => 'image',
         ];
     }
 
     public function messages(){
         return [
             'required' => 'O campo é obrigatório',
+            'image' => 'Arquivo não é uma imagem válida',
         ];
     }
 }

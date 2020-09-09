@@ -22,6 +22,7 @@ class CreateCandidatesTable extends Migration
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('youtube')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

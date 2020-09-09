@@ -3,7 +3,7 @@
 @section('content')
   <h1>Adcionar candidato</h1>
 
-  <form action="{{ route('admin.candidates.store') }}" method="post">
+  <form action="{{ route('admin.candidates.store') }}" method="post" enctype="multipart/form-data">
       @csrf
 
       <div class="form-group">
@@ -52,6 +52,15 @@
           <label for="youtube">Link do youtube</label>
           <input type="text" name="youtube" class="form-control" value="{{ old('youtube') }}">
       </div>
+
+      <div class="form-group">
+            <label for="image">Imagem</label>
+            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+
+            @error('image')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
 
       <div class="form-group">
           <button type="submit" class="btn btn-lg btn-success">Adcionar candidato</button>
