@@ -58,15 +58,14 @@ footer .footer-content .redes-sociais h1 {
 footer .footer-content .redes-sociais .networks {
   display: inline-grid;
   margin-top: 60px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
 }
 
 footer .footer-content .redes-sociais .networks .network {
   width: 40px;
   height: 40px;
-  border-radius: 5px;
-  background: var(--color-background);
+  color: var(--color-background);
 }
 
 footer .footer-content .contact {

@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+
 import './styles.css';
 
 function Footer() {
@@ -22,9 +24,8 @@ function Footer() {
             das novidades, lives e noticias
           </h1>
           <div className="networks">
-            <div className="network"></div>
-            <div className="network"></div>
-            <div className="network"></div>
+            <Link to={{ pathname: "https://www.facebook.com/cristinadeadrianoo/" }} target="_blank"><FaFacebook className="network" /></Link>
+            <Link to={{ pathname: "https://www.instagram.com/cristinadeadriano_"}} target="_blank"><FaInstagram className="network" /></Link>
           </div>
         </div>
         <div className="contact">
