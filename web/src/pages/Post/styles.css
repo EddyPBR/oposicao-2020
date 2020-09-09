@@ -98,12 +98,12 @@
 }
 
 .post .container .content .relevant-posts-content .share-buttons {
-  display: flex;
+  display: none;
+  /* display: flex;
   column-gap: 30px;
   align-items: center;
   justify-content: center;
-
-  margin-top: 10px;
+  margin-top: 10px; */
 }
 
 .post .container .content .relevant-posts-content .share-buttons .share-button {
@@ -122,7 +122,8 @@
 }
 
 .post .container .iframe-facebook {
-  width: calc(100% - 300px);
+  display: none;
+  /* width: calc(100% - 300px);
   height: 300px;
 
   font-family: Roboto;
@@ -133,7 +134,7 @@
 
   background: #c4c4c4;
   color: black;
-  padding: 25px 27px;
+  padding: 25px 27px; */
 }
 
 @media only screen and (max-width: 768px) {
