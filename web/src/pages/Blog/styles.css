@@ -60,13 +60,46 @@
 
 /* blog posts CSS */
 
-.blog .posts .container {
+.blog .container-post {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 187px;
+}
+
+.blog .container-post .posts {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  margin-bottom: 140px;
+}
+
+.blog .container-post .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 20px;
+  margin-top: 83px;
+}
+
+.blog .container-post .pagination .page {
+  width: 40px;
+  height: 40px;
+
+  background: #FFFFFF;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 21px;
+  text-decoration: none;
+  color: var(--color-red);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
