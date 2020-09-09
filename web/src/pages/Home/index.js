@@ -13,21 +13,21 @@ function Index() {
   // Request to API with 3 latest posts;
   const posts = [
     {
-      linkTo: "/posts/1",
+      linkTo: "/blog/1",
       imageURL: image_test,
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "Algum Candidato",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo convallis lorem, efficitur aliquam quam posuere id. Quisque vitae orci orci. In aliquam bibendum turpis vitae cursus"
     },
     {
-      linkTo: "/posts/1",
+      linkTo: "/blog/1",
       imageURL: image_test,
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "Algum Candidato",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo convallis lorem, efficitur aliquam quam posuere id. Quisque vitae orci orci. In aliquam bibendum turpis vitae cursus"
     },
     {
-      linkTo: "/posts/1",
+      linkTo: "/blog/1",
       imageURL: image_test,
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "Algum Candidato",

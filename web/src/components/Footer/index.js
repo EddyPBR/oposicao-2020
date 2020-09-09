@@ -10,7 +10,7 @@ function Footer() {
         <div className="navigation">
           <ul>
             <Link to="/"><li>ÍNICIO</li></Link>
-            <Link to="/posts"><li>POSTS</li></Link>
+            <Link to="/blog"><li>POSTS</li></Link>
             <Link to="/plano-de-governo"><li>PLANO DE GOVERNO</li></Link>
             <Link to="/candidatos"><li>CANDIDATOS 2020</li></Link>
             <Link to="/sobre"><li>SOBRE</li></Link>

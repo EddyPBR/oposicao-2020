@@ -21,7 +21,7 @@ function Navbar() {
           <Link to="/">
             <span>INICIO</span>
           </Link>
-          <Link to="/posts">
+          <Link to="/blog">
             <span>POSTS</span>
           </Link>
           <Link to="/plano-de-governo">
