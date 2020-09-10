@@ -1,14 +1,16 @@
 .warning {
   background: white;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  padding-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .warning .container {
   width: calc(100% - 30px);
-  max-width: 540px;
-  margin: 0 auto;
+  max-width: 550px;
 }
 
 .warning .container .image {
@@ -23,20 +25,6 @@
 .warning .container .image img {
   width: 100%;
   height: 100%;
-}
-
-.warning .container .image a {
-  font-family: Sarabun;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 36px;
-  text-decoration: none;
-
-  position: relative;
-  top: -25px;
-
-  color: var(--color-darkest);
 }
 
 .warning .container .content {
@@ -59,71 +47,7 @@
   font-weight: normal;
   font-size: 1.8rem;
   line-height: 36px;
-  margin-bottom: 60px;
 
   color: var(--color-darkest);
-}
-
-@media only screen and (max-width: 768px) {
-  .warning .container .image a {
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.95rem;
-    line-height: 36px;
-    text-decoration: none;
-  
-    position: relative;
-    top: -25px;
-  
-    color: var(--color-darkest);
-  } 
-}
-
-@media only screen and (max-width: 425px) {
-  .warning .container .image a {
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8rem;
-    line-height: 36px;
-    text-decoration: none;
-  
-    position: relative;
-    top: -23px;
-  
-    color: var(--color-darkest);
-  } 
-}
-
-@media only screen and (max-width: 375px) {
-  .warning .container .image a {
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.7rem;
-    line-height: 36px;
-    text-decoration: none;
-  
-    position: relative;
-    top: -22px;
-  
-    color: var(--color-darkest);
-  } 
-}
-
-@media only screen and (max-width: 320px) {
-  .warning .container .image a {
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.7rem;
-    line-height: 36px;
-    text-decoration: none;
-  
-    position: relative;
-    top: -20px;
-  
-    color: var(--color-darkest);
-  } 
+  margin-bottom: 0px;
 }
