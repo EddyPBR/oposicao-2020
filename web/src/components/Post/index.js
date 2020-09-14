@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Post(props) {
-  const { linkTo, imageURL, title, author, description } = props.post;
+  const { id, image, title, author, body } = props.post;
   return (
-    <Link to={linkTo} className="post-box">
+    <Link to={ `/blog/${id}` } className="post-box">
       <div className="image">
-        <img src={imageURL} alt="Test"/>
+        <img src={ `https://oposicaoareial.000webhostapp.com/storage${image}` } alt={ title }/>
       </div>
       <div className="title">
         {title}
       </div>
       <blockquote>por <span>{author}</span></blockquote>
       <p>
-        {description}
+        {body}
       </p>
     </Link>
   );
