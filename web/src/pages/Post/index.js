@@ -1,107 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import api from '../../services/api';
 
 import './styles.css';
 import RelevantPost from '../../components/RelevantPost';
-import image_test from '../../assets/images/image.jpg';
 
-function Post() {
-  // Request to API with 3 Relevant Posts
-  const relevant_posts = [
-    {
-      linkTo: "/posts/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dollor - et alguna koiza qui fas mi au",
-    },
-    {
-      linkTo: "/posts/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dollor - et alguna koiza qui fas mi au",
-    },
-    {
-      linkTo: "/posts/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dollor - et alguna koiza qui fas mi au",
+function Post(props) {
+  const id_post = props.match.params.post_id;
+
+  const [post, setPost] = useState({});
+  const [relevantPosts, setRelevantPost] = useState([]);
+
+  useEffect(() => {
+    const loadPost = async () => {
+      const response = await api.get(`/post/${id_post}`);
+
+      setPost(response.data);
     }
-  ];
+
+    loadPost();
+  }, [id_post]);
+
+  useEffect(() => {
+    const loadRecentPost = async () => {
+      const response = await api.get(`/`);
+
+      setRelevantPost(response.data);
+    }
+
+    loadRecentPost();
+  }, [])
 
   return (
     <div className="post">
       <div className="container">
         <div className="infos">
           <div className="title">
-            Lorem ipsum dollor - et alguna koiza qui fas mi au
+            { post.title }
           </div>
           <div className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vestibulum a sagittis eros. Nam tristique justo vel
-            fringilla hendrerit. Fusce urna nibh, commodo et
-            arcu nec, pharetra luctus mi. Integer volutpat
-            erat sit amet ipsum luctus rutrum. Duis vel
-            odio ultrices, luctus nisl ut, commodo
-            augue.
+            { post.resume }
           </div>
           <div className="details">
-            <blockquote>por <span>Algum Candidato</span></blockquote>
+            <blockquote>por <span>{ post.author }</span></blockquote>
             <div className="circle"></div>
             <div className="date">
-              01/01/2020
+              { new Date(post.created_at).toLocaleDateString('pt-BR') }
             </div>
           </div>
         </div>
         <div className="content">
           <div className="post-content">
             <div className="image">
-              <img src={image_test} alt="Imagem de areial-pb" />
+              <img src={ `https://oposicaoareial.000webhostapp.com/storage${post.image}` } alt={ post.title } />
             </div>
             <div className="text">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                mollis vitae tortor eu bibendum. Phasellus vel nibh vitae diam
-                vestibulum bibendum. Morbi vestibulum ac tellus id ullamcorper.
-                Suspendisse lorem augue, condimentum at leo id, placerat luctus
-                erat. In aliquam nec massa eu commodo. Fusce nec nibh vitae sem
-                posuere bibendum vitae eu velit. Aliquam viverra elit ipsum,
-                iaculis elementum leo lobortis eget. Fusce sit amet tellus
-                ut tortor hendrerit laoreet. Aenean non leo dolor. Quisque
-                imperdiet ante eget massa vestibulum ultricies. Sed nisl
-                libero, placerat et nisi eu, molestie efficitur nunc.
-                Interdum et malesuada fames ac ante ipsum primis in
-                faucibus. Integer congue finibus eros, nec faucibus
-                magna convallis mollis. Donec elementum porttitor
-                placerat. Nullam sit amet gravida lacus, eu luctus
-                sapien. Praesent at eleifend enim.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                mollis vitae tortor eu bibendum. Phasellus vel nibh vitae diam
-                vestibulum bibendum. Morbi vestibulum ac tellus id ullamcorper.
-                Suspendisse lorem augue, condimentum at leo id, placerat luctus
-                erat. In aliquam nec massa eu commodo. Fusce nec nibh vitae sem
-                posuere bibendum vitae eu velit. Aliquam viverra elit ipsum,
-                iaculis elementum leo lobortis eget. Fusce sit amet tellus
-                ut tortor hendrerit laoreet. Aenean non leo dolor. Quisque
-                imperdiet ante eget massa vestibulum ultricies. Sed nisl
-                libero, placerat et nisi eu, molestie efficitur nunc.
-                Interdum et malesuada fames ac ante ipsum primis in
-                faucibus. Integer congue finibus eros, nec faucibus
-                magna convallis mollis. Donec elementum porttitor
-                placerat. Nullam sit amet gravida lacus, eu luctus
-                sapien. Praesent at eleifend enim.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                mollis vitae tortor eu bibendum. Phasellus vel nibh vitae diam
-                vestibulum bibendum. Morbi vestibulum ac tellus id ullamcorper.
-                Suspendisse lorem augue, condimentum at leo id, placerat luctus
-                erat. In aliquam nec massa eu commodo. Fusce nec nibh vitae sem
-                posuere bibendum vitae eu velit. Aliquam viverra elit ipsum.
+                { post.body }
               </p>
             </div>
           </div>
           <div className="relevant-posts-content">
             <div className="relevant-posts">
-              {relevant_posts.map( (relevant_post, index) => (
+              {relevantPosts.map( (relevant_post, index) => (
                 <RelevantPost relevant_post={relevant_post} key={index} />
               ))}
             </div>

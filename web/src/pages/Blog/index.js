@@ -40,9 +40,7 @@ function Blog() {
       </div>
       <div className="container-post">
         <div className="posts">
-          {posts.map((post, index) => (
-            <Post post={post} key={index} />
-          ))}
+          { posts.map((post, index) => <Post post={post} key={index} /> ) }
         </div>
         <div className="pagination">
           { pages.current_page === 1 ? (
