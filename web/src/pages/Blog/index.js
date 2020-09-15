@@ -30,11 +30,26 @@ function Blog() {
     loadPosts();
   }, [atualPage]);
 
+  async function handleSearch(query){
+    if(query){
+      const response = await api.get(`search/${query}`);
+
+      const { data, ...pagination } = response.data;
+
+      setPosts(data);
+      setPages(pagination);
+    }
+  }
+
   return (
     <div className="blog">
       <div className="search-bar">
         <div className="container">
-          <input type="text" placeholder="Pesquisar..." />
+          <input
+            type="text"
+            onChange={ event => handleSearch(event.target.value) }
+            placeholder="Pesquisar..."
+          />
           <FiSearch className="icon" />
         </div>
       </div>
