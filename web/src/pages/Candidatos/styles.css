@@ -75,6 +75,11 @@
   margin-bottom: 117px;
 }
 
+.candidatos .container .vereadores .container-vereadores {
+  display: flex;
+  gap: 30px;
+}
+
 .candidatos .container .vereadores .container-vereadores .vereador {
   height: 100%;
   width: 270px;
@@ -113,28 +118,30 @@
   color: var(--color-red);
 }
 
-/* .candidatos .container .vereadores .container-vereadores .vereador .content {
-} */
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .candidatos .container .majoritaria {
     display: grid;
     column-gap: 100px;
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     align-items: center;
   }
-  /* .candidatos .container .majoritaria .image {
-    flex: 1;
-    width: 100%;
-    height: 500px;
-    background-image: url('../../assets/images/candidata-prefeita.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-  } */
+  .candidatos .container .majoritarion .image {
+    padding-bottom: 60px;
+  }
+  .candidatos .container .majoritaria .content {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 540px) {
+  .candidatos .container .majoritaria {
+    display: grid;
+    column-gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    align-items: center;
+  }
+
   .candidatos .container .vereadores .container-vereadores {
     display: flex;
     flex-direction: column;
