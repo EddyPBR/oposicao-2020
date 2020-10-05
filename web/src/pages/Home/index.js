@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import candidate from '../../assets/images/RB2_2466.png';
+import candidate from '../../assets/images/candidata-prefeita.png';
 import logo from "../../assets/images/logo-mdb.png";
 import image_test from "../../assets/images/image.jpg";
 
@@ -45,7 +45,7 @@ function Index() {
       <div className="candidate-section">
         <div className="container">
           <div className="candidate">
-            <img src={candidate} alt=""/>
+            <img src={candidate} alt="Candidata a prefeita Cristina Alves"/>
           </div>
           <div className="content">
             <div className="title">
@@ -57,7 +57,7 @@ function Index() {
               commodo convallis lorem, efficitur aliquam quam posuere id. Quisque
               vitae orci orci. In aliquam bibendum turpis vitae cursus
             </div>
-            <Link className="button" to="/candidates">
+            <Link className="button" to="/candidatos">
               Ver todos os candidatos
             </Link>
           </div>

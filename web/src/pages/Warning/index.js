@@ -1,15 +1,15 @@
 import React from 'react';
-// import teamwork from '../../assets/images/teamwork.jpg';
+import teamwork from '../../assets/images/teamwork.svg';
 
-// import './styles.css';
+import './styles.css';
 
 function Warning() {
   return (
     <div className="warning">
       <div className="container">
-        {/* <div className="image">
+        <div className="image">
           <img src={teamwork} alt="Imagem simbolizando trabalho em equipe" />
-        </div> */}
+        </div>
         <div className="content">
           <h1 className="title">Ainda estamos em desenvolvimento...</h1>
           <p>

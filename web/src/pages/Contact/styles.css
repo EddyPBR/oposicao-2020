@@ -1,0 +1,272 @@
+.contact-page {
+  width: 100%;
+  padding-bottom: 63px;
+}
+
+.contact-page .container {
+  display: flex;
+  align-items: center;
+
+  width: calc(100% - 30px);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.contact-page .hero {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-red);
+}
+
+.contact-page .hero .container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .hero .container .info {
+  flex: 1;
+  height: 500px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-page .hero .container .info .text {
+  font-family: Sarabun;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.contact-page .hero .container .info .title {
+  font-family: Red Hat Display;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .hero .container .info .title svg {
+  margin-left: 12px;
+  color: #6AD169;
+
+  height: 20px;
+  width: 20px;
+}
+
+.contact-page .hero .container .info .social-networks {
+  display: flex;
+
+  margin-top: 83px;
+  column-gap: 40px;
+}
+
+.contact-page .hero .container .info .social-networks a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-page .hero .container .info .social-networks a svg {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-page .hero .container .image {
+  flex: 1;
+  height: 100%;
+  
+  background-image: url('../../assets/images/candidata-prefeita.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 650px) {
+  .contact-page .hero .container .image {
+    display: none;
+  }
+}
+
+/* .contact-page .hero .container .image img {
+  height: 100%;
+  width: 100%;
+} */
+
+.contact-page .contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contact-page .contact .container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .contact .next-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 100px;
+}
+
+.contact-page .contact .next-steps .title {
+  font-family: Red Hat Display;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: var(--color-darkest);
+}
+
+.contact-page .contact .next-steps .text {
+  font-family: Sarabun;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.contact-page .contact .next-steps .steps {
+  margin-top: 30px;
+  font-family: Sarabun;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 390;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+
+.contact-page .contact .box-contact {
+  flex: 1;
+  padding: 60px 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 25px 53px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .contact .box-contact input,
+.contact-page .contact .box-contact textarea {
+  height: 50px;
+  width: 100%;
+  
+  border: none;
+  color: var(--color-dark);
+  padding-left: 19px;
+  border-radius: 10px;
+  background-color: var(--color-background);
+}
+
+.contact-page .contact .box-contact textarea {
+  resize: vertical;
+  padding-top: 10px;
+  height: 100px;
+}
+
+::-webkit-input-placeholder {
+  color: #BABACE;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #BABACE;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #BABACE;  
+}
+
+:-ms-input-placeholder {  
+  color: #BABACE;  
+}
+
+.contact-page .contact .box-contact .title {
+  font-family: Red Hat Display;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 48px;
+
+  margin-bottom: 30px;
+
+  color: var(--color-darkest);
+}
+
+.contact-page .contact .box-contact .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .contact .box-contact .form .infos {
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+.contact-page .contact .box-contact .form .contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .contact .box-contact .form .contact .title {
+  font-family: Red Hat Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 13px;
+}
+
+.contact-page .contact .box-contact .form .contact {
+  display: flex;
+  row-gap: 17px;
+  margin-top: 42px;
+  flex-direction: column;
+}
+
+.contact-page .contact .box-contact .form .button-submit {
+  display: grid;
+  column-gap: 30px;
+  margin-top: 50px;
+  grid-template-columns: 1fr;
+}
+
+.contact-page .contact .box-contact .form .button-submit * {
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
+  box-sizing: border-box;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

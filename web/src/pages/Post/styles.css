@@ -7,7 +7,7 @@
 }
 
 .post .container {
-  width: calc(100% - 30px);
+  width: calc(100vw - 30px);
   max-width: 1140px;
 }
 
@@ -75,14 +75,16 @@
 }
 
 .post .container .content .post-content .image {
-  flex: 1;
-  width: 100%;
+  display: flex;
   margin-bottom: 80px;
+  justify-content: center;
+  
+  background-color: var(--color-red);
 }
 
 .post .container .content .post-content .image img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  max-height: 500px;
 }
 
 .post .container .content .post-content .text {

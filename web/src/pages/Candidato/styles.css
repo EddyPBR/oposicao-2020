@@ -1,0 +1,103 @@
+.candidato {
+  width: 100%;
+}
+
+.candidato .hero {
+  width: 100%;
+  height: 75vh;
+  background: var(--color-red);
+
+  display: flex;
+  align-items: center;
+}
+
+.candidato .hero .container {
+  width: calc(100% - 30px);
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.candidato .hero .container .info {
+  color: #fff;
+  font-family: Red Hat Display;
+  font-size: 8.0rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+}
+
+.candidato .hero .container .info .number {
+  margin-top: 40px;
+  font-size: 7.2rem;
+}
+
+.candidato .hero .container .image {
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.candidato .hero .container .info .social-networks {
+  display: flex;
+  column-gap: 20px;
+  margin-top: 40px;
+}
+
+.candidato .hero .container .info .social-networks a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.candidato .hero .container .info .social-networks a svg {
+  width: 30px;
+  height: 30px;
+}
+
+.candidato .bio {
+  margin-top: 130px;
+  margin-bottom: 260px;
+}
+
+.candidato .bio .container {
+  width: calc(100% - 30px);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.candidato .bio .container .title {
+  font-family: Red Hat Display;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 30px;
+
+  color: var(--color-red);
+}
+
+.candidato .bio .container .text {
+  font: 400 1.8 "Red Hat Display";
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: justify;
+
+  color: var(--color-dark);
+
+  display: grid;
+  row-gap: 30px;
+}
+
+@media only screen and (max-width: 650px) {
+  .candidato .hero .container .image {
+    display: none;
+  }
+}

@@ -7,8 +7,10 @@ function Post(props) {
   const { id, image, title, author, body } = props.post;
   return (
     <Link to={ `/blog/${id}` } className="post-box">
-      <div className="image">
+      {/* <div className="image">
         <img src={ `https://oposicaoareial.000webhostapp.com/storage${image}` } alt={ title }/>
+      </div> */}
+      <div className="image" style={{ backgroundImage: `url('https://oposicaoareial.000webhostapp.com/storage${image}')` }}>
       </div>
       <div className="title">
         {title}
