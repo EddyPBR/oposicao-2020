@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import prefeita from '../../assets/images/candidata-prefeita.png';
+import api from '../../services/api';
 
 import './styles.css';
 
 function Candidatos() {
+  const [candidates, setCandidates] = useState([]);
+
+  useEffect(() => {
+    const loadCandidates = async () => {
+      const response = await api.get('/candidates');
+
+      setCandidates(response.data);
+    }
+
+    loadCandidates();
+  }, [])
+
   return (
     <div className="candidatos">
       <div className="container">
@@ -30,21 +42,24 @@ function Candidatos() {
           <div className="title">
             CONHEÇA NOSSOS CANDIDATOS PARA AS ELEIÇÕES DE 2020
           </div>
-          <div className="container-vereadores">
-            <Link to="/candidatos/aritana" className="vereador">
-              <div className="image">
-                <img src={prefeita} alt="Vereador Aritana"/>
-              </div>
-              <div className="content">
-                <div className="name">
-                  Vereador Aritana 
+          
+          { candidates.map(candidate => (
+            <div key={ candidate.id } className="container-vereadores">
+              <Link to={`/candidatos/${candidate.id}`} className="vereador">
+                <div className="image">
+                  <img src={`https://oposicaoareial.000webhostapp.com/storage${candidate.image}`} alt={ candidates.name }/>
                 </div>
-                <div className="number">
-                  15966
-                </div>  
-              </div>
-            </Link>
-          </div>
+                <div className="content">
+                  <div className="name">
+                    { candidate.name } 
+                  </div>
+                  <div className="number">
+                    { candidate.candidate_number }
+                  </div>  
+                </div>
+              </Link>
+            </div>
+          )) }
         </div>
       </div>
     </div>

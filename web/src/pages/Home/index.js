@@ -1,39 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import candidate from '../../assets/images/candidata-prefeita.png';
 import logo from "../../assets/images/logo-mdb.png";
-import image_test from "../../assets/images/image.jpg";
+
+import api from '../../services/api';
 
 import './styles.css';
 
 import Post from '../../components/Post';
 
 function Index() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const loadPost = async () => {
+      const response = await api.get('/');
+
+      setPosts(response.data);
+    }
+
+    loadPost();
+  }, [])
 
   // Request to API with 3 latest posts;
-  const posts = [
-    {
-      linkTo: "/blog/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      author: "Algum Candidato",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo convallis lorem, efficitur aliquam quam posuere id. Quisque vitae orci orci. In aliquam bibendum turpis vitae cursus"
-    },
-    {
-      linkTo: "/blog/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      author: "Algum Candidato",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo convallis lorem, efficitur aliquam quam posuere id. Quisque vitae orci orci. In aliquam bibendum turpis vitae cursus"
-    },
-    {
-      linkTo: "/blog/1",
-      imageURL: image_test,
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      author: "Algum Candidato",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo convallis lorem, efficitur aliquam quam posuere id. Quisque vitae orci orci. In aliquam bibendum turpis vitae cursus"
-    }
-  ];
 
   return (
     <div className="home-page">

@@ -1,30 +1,46 @@
-import React from 'react';
-import candidate from '../../assets/images/candidata-prefeita.png'
+import React, { useState, useEffect } from 'react';
+// import candidate from '../../assets/images/candidata-prefeita.png'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+
+import api from '../../services/api';
 
 import './styles.css';
 
-function Candidato() {
+function Candidato(props) {
+  const id_candidate = props.match.params.name_candidate;
+
+  const [candidate, setCandidate] = useState({});
+
+  useEffect(() => {
+    const loadCandidate = async () => {
+      const response = await api.get(`/candidate/${id_candidate}`);
+
+      setCandidate(response.data.data.user_info);
+    }
+
+    loadCandidate();
+  })
+
   return (
     <div className="candidato">
       <div className="hero">
         <div className="container">
           <div className="info">
-            <div className="name">Aritana</div>
-            <div className="number">15966</div>
+            <div className="name">{ candidate.name }</div>
+            <div className="number">{ candidate.candidate_number }</div>
             <div className="social-networks">
-              <a rel="noopener noreferrer" href="/" target="_blank" className="facebook">
+              <a rel="noopener noreferrer" href={ candidate.facebook } target="_blank" className="facebook">
                 <FaFacebook />
               </a>
-              <a rel="noopener noreferrer" href="/" target="_blank" className="instagram">
+              <a rel="noopener noreferrer" href={ candidate.instagram } target="_blank" className="instagram">
                 <FaInstagram />
               </a>
-              <a rel="noopener noreferrer" href="https://facebook.com" target="_blank" className="youtube">
+              <a rel="noopener noreferrer" href={ candidate.youtube } target="_blank" className="youtube">
                 <FaYoutube />
               </a>
             </div>
           </div>
-          <div className="image" style={{ backgroundImage: `url(${candidate})` }}>
+          <div className="image" style={{ backgroundImage: `url(https://oposicaoareial.000webhostapp.com/storage${candidate.image})` }}>
           </div>
         </div>
       </div>
@@ -33,16 +49,7 @@ function Candidato() {
           <div className="title">BIOGRAFIA</div>
           <div className="text">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel pharetra libero. Integer eget justo eu neque condimentum interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut imperdiet ligula egestas ligula tincidunt ullamcorper. Sed pellentesque, nunc non venenatis efficitur, nisi libero ultricies ex, et ullamcorper odio quam et metus. Morbi finibus rutrum lectus non porta. Etiam id felis non massa semper pharetra. Nullam et ex nec mauris ornare laoreet. Morbi magna ligula, blandit in consectetur ut, ornare sed est. Aliquam auctor nibh ac justo blandit convallis. Pellentesque eu porttitor sem. Mauris turpis ex, pharetra sit amet metus eget, tempor accumsan metus. Fusce tellus turpis, fringilla id ex sed, semper luctus sapien. Maecenas suscipit vestibulum nibh ac dapibus.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel pharetra libero. Integer eget justo eu neque condimentum interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut imperdiet ligula egestas ligula tincidunt ullamcorper. Sed pellentesque, nunc non venenatis efficitur, nisi libero ultricies ex, et ullamcorper odio quam et metus. Morbi finibus rutrum lectus non porta. Etiam id felis non massa semper pharetra. Nullam et ex nec mauris ornare laoreet. Morbi magna ligula, blandit in consectetur ut, ornare sed est. Aliquam auctor nibh ac justo blandit convallis. Pellentesque eu porttitor sem. Mauris turpis ex, pharetra sit amet metus eget, tempor accumsan metus. Fusce tellus turpis, fringilla id ex sed, semper luctus sapien. Maecenas suscipit vestibulum nibh ac dapibus.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel pharetra libero. Integer eget justo eu neque condimentum interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut imperdiet ligula egestas ligula tincidunt ullamcorper. Sed pellentesque, nunc non venenatis efficitur, nisi libero ultricies ex, et ullamcorper odio quam et metus. Morbi finibus rutrum lectus non porta. Etiam id felis non massa semper pharetra. Nullam et ex nec mauris ornare laoreet. Morbi magna ligula, blandit in consectetur ut, ornare sed est. Aliquam auctor nibh ac justo blandit convallis. Pellentesque eu porttitor sem. Mauris turpis ex, pharetra sit amet metus eget, tempor accumsan metus. Fusce tellus turpis, fringilla id ex sed, semper luctus sapien. Maecenas suscipit vestibulum nibh ac dapibus.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel pharetra libero. Integer eget justo eu neque condimentum interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut imperdiet ligula egestas ligula tincidunt ullamcorper. Sed pellentesque, nunc non venenatis efficitur, nisi libero ultricies ex, et ullamcorper odio quam et metus. Morbi finibus rutrum lectus non porta. Etiam id felis non massa semper pharetra. Nullam et ex nec mauris ornare laoreet. Morbi magna ligula, blandit in consectetur ut, ornare sed est. Aliquam auctor nibh ac justo blandit convallis. Pellentesque eu porttitor sem. Mauris turpis ex, pharetra sit amet metus eget, tempor accumsan metus. Fusce tellus turpis, fringilla id ex sed, semper luctus sapien. Maecenas suscipit vestibulum nibh ac dapibus.
+              { candidate.bio } 
             </p>
           </div>
         </div>
