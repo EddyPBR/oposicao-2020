@@ -5,7 +5,7 @@
 .candidato .hero {
   width: 100%;
   height: 75vh;
-  background: var(--color-red);
+  background: var(--color-red-dark);
 
   display: flex;
   align-items: center;

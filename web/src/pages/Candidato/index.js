@@ -19,7 +19,7 @@ function Candidato(props) {
     }
 
     loadCandidate();
-  })
+  });
 
   return (
     <div className="candidato">

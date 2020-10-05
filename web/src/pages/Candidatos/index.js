@@ -46,8 +46,8 @@ function Candidatos() {
           <div  className="container-vereadores">
           { candidates.map(candidate => (
               <Link key={ candidate.id } to={`/candidatos/${candidate.id}`} className="vereador">
-                <div className="image">
-                  <img src={`https://oposicaoareial.000webhostapp.com/storage${candidate.image}`} alt={ candidates.name }/>
+                <div className="image" style={{ backgroundImage: `url('https://oposicaoareial.000webhostapp.com/storage${candidate.image}')` }}>
+                  {/* <img src={`https://oposicaoareial.000webhostapp.com/storage${candidate.image}`} alt={ candidates.name }/> */}
                 </div>
                 <div className="content">
                   <div className="name">
