@@ -43,9 +43,9 @@ function Candidatos() {
             CONHEÇA NOSSOS CANDIDATOS PARA AS ELEIÇÕES DE 2020
           </div>
           
+          <div  className="container-vereadores">
           { candidates.map(candidate => (
-            <div key={ candidate.id } className="container-vereadores">
-              <Link to={`/candidatos/${candidate.id}`} className="vereador">
+              <Link key={ candidate.id } to={`/candidatos/${candidate.id}`} className="vereador">
                 <div className="image">
                   <img src={`https://oposicaoareial.000webhostapp.com/storage${candidate.image}`} alt={ candidates.name }/>
                 </div>
@@ -58,8 +58,8 @@ function Candidatos() {
                   </div>  
                 </div>
               </Link>
-            </div>
           )) }
+          </div>
         </div>
       </div>
     </div>
