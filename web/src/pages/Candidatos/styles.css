@@ -75,6 +75,11 @@
   margin-bottom: 117px;
 }
 
+/* .candidatos .container .vereadores .container-vereadores {
+  display: flex;
+  gap: 30px;
+} */
+
 .candidatos .container .vereadores .container-vereadores {
   display: flex;
   gap: 30px;
