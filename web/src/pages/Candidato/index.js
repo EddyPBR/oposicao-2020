@@ -48,9 +48,11 @@ function Candidato(props) {
         <div className="container">
           <div className="title">BIOGRAFIA</div>
           <div className="text">
-            <p>
-              { candidate.bio } 
-            </p>
+            { candidate.bio &&
+              candidate.bio.split('\n').map( function(elem) {
+                return <p>{elem}</p>;
+              })
+            }
           </div>
         </div>
       </div>
