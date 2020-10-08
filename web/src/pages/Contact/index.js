@@ -81,7 +81,7 @@ function Contact() {
                 <div className="title">
                   Insira abaixo o que deseja nos contatar:
                 </div>
-                <input type="text" onChange={onChange} placeholder="Assunto(Sobre o que deseja contatar-nos" value={data.assunto} name="assunto" />
+                <input type="text" onChange={onChange} placeholder="Assunto" value={data.assunto} name="assunto" />
                 <textarea onChange={onChange} placeholder="Digite aqui o que deseja contatar-nos" value={data.mensagem} name="mensagem" />
               </div>
               <div className="button-submit">
