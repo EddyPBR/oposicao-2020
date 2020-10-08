@@ -12,8 +12,6 @@ function Comments({data}) {
     title,
   };
 
-  console.log(disqusConfig);
-
   return (
     <div className="comments">
       <Disqus.DiscussionEmbed
