@@ -1,0 +1,66 @@
+.sobre {
+  width: 100%;
+}
+
+.sobre .hero {
+  height: calc(100vh - 100px);
+}
+
+.sobre .hero .container {
+  display: grid;
+  column-gap: 60px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+
+  width: calc(100% - 30px);
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.sobre .hero .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sobre .hero .info .title {
+  margin-bottom: 15px;
+}
+
+.sobre .hero .info .title:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 30px;
+  background: var(--color-red);
+}
+
+.sobre .hero .image {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/images/candidata-prefeita-e-vice.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sobre .hero .container {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    align-items: center;
+    row-gap: 60px;
+  }
+
+  .sobre .hero .image {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/images/candidata-prefeita-e-vice.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+}
