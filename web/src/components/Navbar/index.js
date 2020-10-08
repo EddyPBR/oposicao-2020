@@ -29,19 +29,19 @@ function Navbar() {
           <Link to="/" onClick={desactivateMenu}>
             <span>INICIO</span>
           </Link>
-          <Link to="/blog">
+          <Link to="/blog" onClick={desactivateMenu}>
             <span>POSTS</span>
           </Link>
-          <Link to="/plano-de-governo">
+          <Link to="/plano-de-governo" onClick={desactivateMenu}>
             <span>PLANO DE GOVERNO</span>
           </Link>
-          <Link to="/candidatos">
+          <Link to="/candidatos" onClick={desactivateMenu}>
             <span>CANDIDATOS 2020</span>
           </Link>
-          <Link to="/sobre">
+          <Link to="/sobre" onClick={desactivateMenu}>
             <span>SOBRE</span>
           </Link>
-          <Link to="/contato">
+          <Link to="/contato" onClick={desactivateMenu}>
             <span>CONTATO</span>
           </Link>
         </div>
