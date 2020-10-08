@@ -4,13 +4,13 @@
 
 .sobre .hero {
   height: calc(100vh - 100px);
+  width: 100%;
 }
 
 .sobre .hero .container {
   display: grid;
   column-gap: 60px;
   align-items: center;
-  justify-content: center;
   grid-template-columns: 1fr 1fr;
 
   width: calc(100% - 30px);
@@ -37,6 +37,10 @@
   background: var(--color-red);
 }
 
+.sobre .hero .info .text {
+  text-align: justify;
+}
+
 .sobre .hero .image {
   width: 100%;
   height: 100vh;
@@ -47,6 +51,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .sobre .hero {
+    height: 100%;
+    width: 100%;
+  }
+
   .sobre .hero .container {
     display: grid;
     margin-top: 30px;
@@ -62,5 +71,16 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sobre .hero .container .info {
+    width: calc(100vw - 30px);
+  }
+
+  .sobre .hero .container .image {
+    height: 500px;
+    width: calc(100vw - 30px);
   }
 }
