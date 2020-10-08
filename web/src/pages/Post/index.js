@@ -54,8 +54,11 @@ function Post(props) {
         </div>
         <div className="content">
           <div className="post-content">
-            <div className="image">
-              <img src={ `https://oposicaoareial.000webhostapp.com/storage${post.image}` } alt={ post.title } />
+            <div className="media">
+              {post.youtube
+                ? <iframe title={post.title} width="100%" height="500" src={post.youtube} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                : <img src={ `https://oposicaoareial.000webhostapp.com/storage${post.image}` } alt={ post.title } />
+              }
             </div>
             <div className="text">
               <p>

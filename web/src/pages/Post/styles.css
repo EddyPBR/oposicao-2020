@@ -74,7 +74,7 @@
   flex-direction: column;
 }
 
-.post .container .content .post-content .image {
+.post .container .content .post-content .media {
   display: flex;
   margin-bottom: 80px;
   justify-content: center;
@@ -82,7 +82,7 @@
   background-color: var(--color-red);
 }
 
-.post .container .content .post-content .image img {
+.post .container .content .post-content .media img {
   width: auto;
   max-height: 500px;
 }
@@ -128,7 +128,7 @@
     grid-template-columns: 1fr;
   }
 
-  .post .container .content .post-content .image {
+  .post .container .content .post-content .media {
     margin-bottom: 40px;
   }
 }
