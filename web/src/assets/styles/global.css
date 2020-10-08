@@ -60,3 +60,7 @@ h6 {
   font: 700 3.2 "Red Hat Display";
   color: var(--color-dark);
 }
+
+a {
+  color: var(--color-red-light);
+}

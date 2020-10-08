@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import './styles.css';
+
 import RelevantPost from '../../components/RelevantPost';
+import Comments from '../../components/Comments';
 
 function Post(props) {
   const id_post = props.match.params.post_id;
@@ -30,7 +32,7 @@ function Post(props) {
     }
 
     loadRecentPost();
-  }, [])
+  }, []);
 
   return (
     <div className="post">
@@ -77,9 +79,10 @@ function Post(props) {
             </div>
           </div>
         </div>
-        <div className="iframe-facebook">
-          Iframe do serviço de comentários integrados ao Facebook
-        </div>
+        <Comments data={{
+          identifier: id_post,
+          title: post.title,
+        }} />
       </div>
     </div>
   );
