@@ -84,6 +84,7 @@
 
 .post .container .content .post-content .media img {
   width: auto;
+  max-width: 100%;
   max-height: 500px;
 }
 
