@@ -9,7 +9,6 @@ function Navbar() {
     const element = document.querySelector("#activate-menu");
     if(element) {
       element.checked = false;
-      console.log(element);
     }
   }
 
