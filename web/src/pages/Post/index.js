@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 import api from '../../services/api';
 
@@ -33,6 +33,20 @@ function Post(props) {
 
     loadRecentPost();
   }, []);
+
+  const shareFacebook = (e) => {
+    e.preventDefault();
+    var link = `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`;
+    link = window.encodeURIComponent(link);
+    window.open(link);
+  }
+
+  const shareWhatsapp = (e) => {
+    e.preventDefault();
+    var msg = `Olha que legal esse post da Oposição Areial(MDB 15)\n\n${window.location.href}`
+    msg = window.encodeURIComponent(msg);
+    window.open("https://api.whatsapp.com/send?text=" + msg, "_blank");
+  }
 
   return (
     <div className="post">
@@ -73,12 +87,12 @@ function Post(props) {
               ))}
             </div>
             <div className="share-buttons">
-              <Link to="/posts/1" className="share-button share-button-facebook">
-                F
-              </Link>
-              <Link to="/posts/1" className="share-button share-button-whatsapp">
-                W
-              </Link>
+              <div onClick={shareFacebook} className="share-button share-button-facebook">
+                <FaFacebook />
+              </div>
+              <div onClick={shareWhatsapp} className="share-button share-button-whatsapp">
+                <FaWhatsapp />
+              </div>
             </div>
           </div>
         </div>
