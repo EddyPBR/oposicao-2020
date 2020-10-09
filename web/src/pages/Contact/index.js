@@ -23,7 +23,6 @@ function Contact() {
   }
 
   const withData = () => {
-    console.log(data.nome);
     if(data.nome !== '' && data.email !== '' && data.assunto !== '' && data.mensagem !== '') {
       return true;
     }
@@ -32,9 +31,11 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    var msg = `De: ${data.nome}\nPara: MDB 15\nE-mail: ${data.email}\n\nAssunto: ${data.assunto}\nMensagem: ${data.mensagem}`
-    msg = window.encodeURIComponent(msg);
-    window.open("https://api.whatsapp.com/send?phone=5583987226043&text=" + msg, "_blank");
+    if(withData) {
+      var msg = `De: ${data.nome}\nPara: MDB 15\nE-mail: ${data.email}\n\nAssunto: ${data.assunto}\nMensagem: ${data.mensagem}`
+      msg = window.encodeURIComponent(msg);
+      window.open("https://api.whatsapp.com/send?phone=5583987226043&text=" + msg, "_blank");
+    }
   }
 
   return (
@@ -85,7 +86,7 @@ function Contact() {
                 <textarea onChange={onChange} placeholder="Digite aqui o que deseja contatar-nos" value={data.mensagem} name="mensagem" />
               </div>
               <div className="button-submit">
-                <div className="whatsapp" onClick={withData() && handleSubmit}>
+                <div className="whatsapp" onClick={handleSubmit}>
                   { withData() ? 'Whatsapp' : 'Preencha todas informações!!' }
                 </div>
               </div>
