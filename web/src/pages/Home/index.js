@@ -30,6 +30,7 @@ function Index() {
 
   return (
     <div className="home-page">
+      <div className="hero"></div>
       <div className="recent-posts">
         {posts.map( (post, index) => (
           <Post post={post} key={index} />

@@ -1,3 +1,17 @@
+.home-page {
+  width: 100%;
+}
+
+.hero {
+  background-image: url('../../assets/images/capa-oposicao.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+
 /* recent-posts CSS */
 
 .recent-posts {
