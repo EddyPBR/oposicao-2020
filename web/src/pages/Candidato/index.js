@@ -29,15 +29,21 @@ function Candidato(props) {
             <div className="name">{ candidate.name }</div>
             <div className="number">{ candidate.candidate_number }</div>
             <div className="social-networks">
-              <a rel="noopener noreferrer" href={ candidate.facebook } target="_blank" className="facebook">
-                <FaFacebook />
-              </a>
-              <a rel="noopener noreferrer" href={ candidate.instagram } target="_blank" className="instagram">
-                <FaInstagram />
-              </a>
-              <a rel="noopener noreferrer" href={ candidate.youtube } target="_blank" className="youtube">
-                <FaYoutube />
-              </a>
+              {candidate.facebook &&
+                <a rel="noopener noreferrer" href={ candidate.facebook } target="_blank" className="facebook">
+                  <FaFacebook />
+                </a>
+              }
+              {candidate.instagram &&
+                <a rel="noopener noreferrer" href={ candidate.instagram } target="_blank" className="instagram">
+                  <FaInstagram />
+                </a>
+              }
+              {candidate.youtube &&
+                <a rel="noopener noreferrer" href={ candidate.youtube } target="_blank" className="youtube">
+                  <FaYoutube />
+                </a>
+              }
             </div>
           </div>
           <div className="image" style={{ backgroundImage: `url(https://oposicaoareial.000webhostapp.com/storage${candidate.image})` }}>
