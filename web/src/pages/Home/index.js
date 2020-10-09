@@ -13,6 +13,10 @@ function Index() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const loadPost = async () => {
       const response = await api.get('/');
 

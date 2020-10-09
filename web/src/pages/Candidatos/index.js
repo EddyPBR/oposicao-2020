@@ -7,6 +7,10 @@ import './styles.css';
 
 function Candidatos() {
   const [candidates, setCandidates] = useState([]);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const loadCandidates = async () => {

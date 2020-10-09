@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 
 import { FiCheckCircle } from 'react-icons/fi';
@@ -13,6 +13,10 @@ function Contact() {
     assunto: '',
     mensagem: '',
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const onChange = (evt) => {
     const value = evt.target.type === 'checkbox' ? evt.target.checked : evt.target.value;

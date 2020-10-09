@@ -14,7 +14,11 @@ function Blog() {
   const [pages, setPages] = useState({});
 
   useEffect(() => {
-    async function loadPosts(){
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    async function loadPosts() {
       const response = await api.get('blog', {
         params: {
           page: atualPage

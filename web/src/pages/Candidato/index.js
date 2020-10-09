@@ -12,6 +12,10 @@ function Candidato(props) {
   const [candidate, setCandidate] = useState({});
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const loadCandidate = async () => {
       const response = await api.get(`/candidate/${id_candidate}`);
 

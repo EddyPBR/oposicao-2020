@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import teamwork from '../../assets/images/teamwork.svg';
 
 import './styles.css';
 
 function Warning() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="warning">
       <div className="container">

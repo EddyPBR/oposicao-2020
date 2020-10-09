@@ -16,6 +16,10 @@ function Post(props) {
   const [relevantPosts, setRelevantPost] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const loadPost = async () => {
       const response = await api.get(`/post/${id_post}`);
 
