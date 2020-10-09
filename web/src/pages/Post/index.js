@@ -37,7 +37,6 @@ function Post(props) {
   const shareFacebook = (e) => {
     e.preventDefault();
     var link = `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`;
-    link = window.encodeURIComponent(link);
     window.open(link);
   }
 
