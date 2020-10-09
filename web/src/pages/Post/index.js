@@ -73,11 +73,9 @@ function Post(props) {
                 : <img src={ `https://oposicaoareial.000webhostapp.com/storage${post.image}` } alt={ post.title } />
               }
             </div>
-            <div className="text">
-              <p>
-                { post.body }
-              </p>
-            </div>
+            <p className="text">
+              { post.body }
+            </p>
           </div>
           <div className="relevant-posts-content">
             <div className="relevant-posts">
