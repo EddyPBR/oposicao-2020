@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 import api from '../../services/api';
@@ -58,7 +59,7 @@ function Post(props) {
             { post.resume }
           </div>
           <div className="details">
-            <blockquote>por <span>{ post.author }</span></blockquote>
+            <blockquote>por <Link to={`/candidatos/${post.candidate_id}`}>{ post.author }</Link></blockquote>
             <div className="circle"></div>
             <div className="date">
               { new Date(post.created_at).toLocaleDateString('pt-BR') }

@@ -41,9 +41,10 @@
   color: var(--color-dark-light);
 }
 
-.post .container .infos .details blockquote span {
+.post .container .infos .details blockquote a {
   color: var(--color-darkest);
   letter-spacing: 0.03em;
+  text-decoration: none;
   font-weight: bold;
 }
 
