@@ -9,7 +9,7 @@
 
 .sobre .hero .container {
   display: grid;
-  column-gap: 60px;
+  column-gap: 150px;
   align-items: center;
   grid-template-columns: 1fr 1fr;
 
