@@ -56,7 +56,7 @@ function Index() {
         <div className="title">
           Dúvidas, sugestões, quer fazer parte do nosso trabalho? 
         </div>
-        <Link className="button" to="/contact">
+        <Link className="button" to="/contato">
           Entre em contato
         </Link>
       </div>
