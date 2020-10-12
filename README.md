@@ -49,5 +49,5 @@ Este projeto esta sobre a [MIT license](LICENSE) clique para mais detalhes
 
 EddyPBR no [Instagram](https://www.instagram.com/edvaldo_junior_dev/) ou [linkedIn](https://www.linkedin.com/in/edvaldojuniordev/) e vamos conversar um pouco :wink: <br /><br />
 Félix no [Github](https://github.com/felixvicent) ou [Instagram](https://www.instagram.com/felps1306/) e vamos tomar um café :coffee: <br /><br />
-Ryan no [Instagram](https://www.instagram.com/ryanlima.dev/) ou [Github](https://github.com/ScriptRyan) quer leite com biscoitos? :cookie:
+Ryan no [Instagram](https://www.instagram.com/ryanlima.dev/) ou [Github](https://github.com/RyanPBR) quer leite com biscoitos? :cookie:
 <br />
